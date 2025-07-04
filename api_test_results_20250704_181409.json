@@ -1,0 +1,624 @@
+[
+  {
+    "name": "Health Check",
+    "endpoint": "api/health",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "status": "healthy",
+      "timestamp": "2025-07-04T18:14:09.389019"
+    }
+  },
+  {
+    "name": "Get Equipment List",
+    "endpoint": "api/equipment",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": [
+      {
+        "id": "4a85e594-69a0-447c-a11f-a14c07cb7f3a",
+        "name": "T3170x Continuous Ink Printer",
+        "description": "High-quality continuous ink printer for professional printing",
+        "specifications": {
+          "type": "Inkjet Printer",
+          "ink_system": "Continuous Ink",
+          "print_speed": "15 ipm",
+          "resolution": "5760 x 1440 dpi",
+          "paper_sizes": [
+            "A4",
+            "Letter",
+            "Legal"
+          ]
+        },
+        "image_url": "https://example.com/t3170x.jpg",
+        "category": "printing"
+      },
+      {
+        "id": "ea503a11-0bb4-41b1-af6a-a736630e91ef",
+        "name": "WF5280 Continuous Ink Printer",
+        "description": "Multi-function continuous ink printer with scanning capabilities",
+        "specifications": {
+          "type": "Multi-function Printer",
+          "ink_system": "Continuous Ink",
+          "functions": [
+            "Print",
+            "Scan",
+            "Copy",
+            "Fax"
+          ],
+          "print_speed": "20 ipm",
+          "resolution": "4800 x 1200 dpi"
+        },
+        "image_url": "https://example.com/wf5280.jpg",
+        "category": "printing"
+      },
+      {
+        "id": "80f34d6f-beba-4d60-8fcf-22ad168a5638",
+        "name": "L1250 Sublimation Printer",
+        "description": "Specialized sublimation printer for custom products",
+        "specifications": {
+          "type": "Sublimation Printer",
+          "ink_system": "Continuous Ink",
+          "print_width": "210mm",
+          "resolution": "5760 x 1440 dpi",
+          "specialty": "Sublimation printing"
+        },
+        "image_url": "https://example.com/l1250.jpg",
+        "category": "sublimation"
+      },
+      {
+        "id": "5d4664f9-9688-46d1-a204-1b605b77c98d",
+        "name": "Mug Printing Press",
+        "description": "Professional mug heat press for sublimation",
+        "specifications": {
+          "type": "Heat Press",
+          "application": "Mugs",
+          "temperature_range": "0-250\u00b0C",
+          "pressure": "Adjustable",
+          "timer": "Digital timer"
+        },
+        "image_url": "https://example.com/mug-press.jpg",
+        "category": "pressing"
+      },
+      {
+        "id": "30aae57e-3b2c-4882-85ab-5f630c497588",
+        "name": "40x60cm Flat Press",
+        "description": "Large format flat heat press for various sublimation products",
+        "specifications": {
+          "type": "Flat Heat Press",
+          "size": "40x60cm",
+          "temperature_range": "0-250\u00b0C",
+          "pressure": "Adjustable",
+          "applications": [
+            "T-shirts",
+            "Mousepads",
+            "Bags"
+          ]
+        },
+        "image_url": "https://example.com/flat-press.jpg",
+        "category": "pressing"
+      },
+      {
+        "id": "af4e9cbe-0d50-4cb4-b609-c89969c2384a",
+        "name": "Silhouette Cameo 5",
+        "description": "Professional cutting machine for vinyl and other materials",
+        "specifications": {
+          "type": "Cutting Machine",
+          "cutting_width": "12 inches",
+          "cutting_length": "10 feet",
+          "materials": [
+            "Vinyl",
+            "Cardstock",
+            "Fabric"
+          ],
+          "software": "Silhouette Studio"
+        },
+        "image_url": "https://example.com/cameo5.jpg",
+        "category": "cutting"
+      },
+      {
+        "id": "c812b86f-3d64-4dfd-b85f-98dacb209456",
+        "name": "i7 Computer Setup",
+        "description": "High-performance computer with professional graphic software",
+        "specifications": {
+          "processor": "Intel i7",
+          "ram": "16GB",
+          "storage": "512GB SSD",
+          "graphics": "Dedicated GPU",
+          "software": [
+            "Adobe Creative Suite",
+            "CorelDRAW",
+            "Silhouette Studio"
+          ]
+        },
+        "image_url": "https://example.com/computer.jpg",
+        "category": "computing"
+      },
+      {
+        "id": "4a5f24ab-ca7d-465b-8745-cdbb4e322f32",
+        "name": "40 inch TV Monitor",
+        "description": "Large display for design work and customer presentations",
+        "specifications": {
+          "size": "40 inches",
+          "resolution": "4K Ultra HD",
+          "connectivity": [
+            "HDMI",
+            "USB",
+            "Bluetooth"
+          ],
+          "use": "Design work and presentations"
+        },
+        "image_url": "https://example.com/tv-monitor.jpg",
+        "category": "display"
+      },
+      {
+        "id": "dfea5f44-e5e1-4c77-bfaf-a934698afed7",
+        "name": "Plate Maker",
+        "description": "Professional plate making equipment for custom plates",
+        "specifications": {
+          "type": "Plate Maker",
+          "materials": [
+            "Ceramic",
+            "Glass"
+          ],
+          "size_range": "6-12 inches",
+          "temperature": "Variable"
+        },
+        "image_url": "https://example.com/plate-maker.jpg",
+        "category": "specialty"
+      },
+      {
+        "id": "e0ce30cb-0fc5-42f1-9e85-8d8180c86484",
+        "name": "Bookbinder",
+        "description": "Professional bookbinding equipment for custom books and notebooks",
+        "specifications": {
+          "type": "Bookbinder",
+          "binding_types": [
+            "Perfect Bound",
+            "Saddle Stitch",
+            "Spiral"
+          ],
+          "paper_capacity": "500 sheets",
+          "automation": "Semi-automatic"
+        },
+        "image_url": "https://example.com/bookbinder.jpg",
+        "category": "binding"
+      },
+      {
+        "id": "4a8750de-c136-48a9-aac4-936c00f996fd",
+        "name": "TTS-Pro 20 Laser Cutting Machine",
+        "description": "Professional laser cutting machine for precision cutting",
+        "specifications": {
+          "type": "Laser Cutter",
+          "cutting_area": "20x20 inches",
+          "laser_power": "40W",
+          "materials": [
+            "Acrylic",
+            "Wood",
+            "Paper",
+            "Fabric"
+          ],
+          "software": "Compatible with various CAD software"
+        },
+        "image_url": "https://example.com/laser-cutter.jpg",
+        "category": "cutting"
+      }
+    ]
+  },
+  {
+    "name": "Get Franchise Plans",
+    "endpoint": "api/franchise-plans",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": [
+      {
+        "id": "6e9dc9fc-b8d1-49fc-a524-3be1202b2ef1",
+        "name": "Starter Package",
+        "type": "starter",
+        "price": 25000.0,
+        "monthly_royalty": 1500.0,
+        "setup_fee": 5000.0,
+        "equipment_included": [
+          "T3170x Continuous Ink Printer",
+          "Basic computer setup",
+          "Silhouette Cameo 5",
+          "Basic furniture package"
+        ],
+        "features": [
+          "Basic equipment package",
+          "Initial training (40 hours)",
+          "Standard support",
+          "Marketing materials",
+          "Basic software package"
+        ],
+        "support_level": "Email and phone support",
+        "training_hours": 40,
+        "description": "Perfect for entrepreneurs starting their stationery business with essential equipment and support.",
+        "popular": false
+      },
+      {
+        "id": "d4f2ea50-3fd7-4a30-bdfc-29a3a2bdf3fb",
+        "name": "Professional Package",
+        "type": "professional",
+        "price": 45000.0,
+        "monthly_royalty": 2500.0,
+        "setup_fee": 7500.0,
+        "equipment_included": [
+          "T3170x Continuous Ink Printer",
+          "WF5280 Continuous Ink Printer",
+          "L1250 Sublimation Printer",
+          "Mug Printing Press",
+          "i7 Computer Setup",
+          "40 inch TV Monitor",
+          "Complete furniture package"
+        ],
+        "features": [
+          "Professional equipment package",
+          "Extended training (80 hours)",
+          "Priority support",
+          "Advanced marketing materials",
+          "Full software suite",
+          "Sublimation capabilities"
+        ],
+        "support_level": "Priority phone and email support",
+        "training_hours": 80,
+        "description": "Comprehensive package for serious entrepreneurs ready to offer full stationery and sublimation services.",
+        "popular": true
+      },
+      {
+        "id": "c9232d22-27f9-4830-b354-512f787a2b79",
+        "name": "Premium Package",
+        "type": "premium",
+        "price": 70000.0,
+        "monthly_royalty": 3500.0,
+        "setup_fee": 10000.0,
+        "equipment_included": [
+          "All Professional Package items",
+          "40x60cm Flat Press",
+          "Plate Maker",
+          "Bookbinder",
+          "TTS-Pro 20 Laser Cutting Machine",
+          "Premium furniture package"
+        ],
+        "features": [
+          "Premium equipment package",
+          "Comprehensive training (120 hours)",
+          "Dedicated support manager",
+          "Premium marketing materials",
+          "Advanced software suite",
+          "Laser cutting capabilities",
+          "Custom product development"
+        ],
+        "support_level": "Dedicated support manager",
+        "training_hours": 120,
+        "description": "Complete premium package for established businesses wanting to offer the full range of custom stationery and products.",
+        "popular": false
+      },
+      {
+        "id": "0ec4b496-51a4-4fa1-8142-976a49d3dae6",
+        "name": "Enterprise Package",
+        "type": "enterprise",
+        "price": 100000.0,
+        "monthly_royalty": 5000.0,
+        "setup_fee": 15000.0,
+        "equipment_included": [
+          "All Premium Package items",
+          "Additional backup equipment",
+          "Advanced computer setup",
+          "Premium display systems",
+          "Complete workshop setup"
+        ],
+        "features": [
+          "Enterprise-grade equipment",
+          "Extensive training (200 hours)",
+          "24/7 dedicated support",
+          "Custom marketing campaigns",
+          "Enterprise software suite",
+          "Territory protection",
+          "Multi-location support",
+          "Custom branding package"
+        ],
+        "support_level": "24/7 dedicated support team",
+        "training_hours": 200,
+        "description": "Ultimate enterprise solution for large-scale operations with multiple locations and extensive custom capabilities.",
+        "popular": false
+      }
+    ]
+  },
+  {
+    "name": "Get Specific Franchise Plan (starter)",
+    "endpoint": "api/franchise-plans/starter",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "id": "c53ea496-6b3f-43e8-a6b0-25d03fe9b97b",
+      "name": "Starter Package",
+      "type": "starter",
+      "price": 25000.0,
+      "monthly_royalty": 1500.0,
+      "setup_fee": 5000.0,
+      "equipment_included": [
+        "T3170x Continuous Ink Printer",
+        "Basic computer setup",
+        "Silhouette Cameo 5",
+        "Basic furniture package"
+      ],
+      "features": [
+        "Basic equipment package",
+        "Initial training (40 hours)",
+        "Standard support",
+        "Marketing materials",
+        "Basic software package"
+      ],
+      "support_level": "Email and phone support",
+      "training_hours": 40,
+      "description": "Perfect for entrepreneurs starting their stationery business with essential equipment and support.",
+      "popular": false
+    }
+  },
+  {
+    "name": "Get Specific Franchise Plan (professional)",
+    "endpoint": "api/franchise-plans/professional",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "id": "b3a478b2-fb5d-4a48-af79-8b6f7ceb201e",
+      "name": "Professional Package",
+      "type": "professional",
+      "price": 45000.0,
+      "monthly_royalty": 2500.0,
+      "setup_fee": 7500.0,
+      "equipment_included": [
+        "T3170x Continuous Ink Printer",
+        "WF5280 Continuous Ink Printer",
+        "L1250 Sublimation Printer",
+        "Mug Printing Press",
+        "i7 Computer Setup",
+        "40 inch TV Monitor",
+        "Complete furniture package"
+      ],
+      "features": [
+        "Professional equipment package",
+        "Extended training (80 hours)",
+        "Priority support",
+        "Advanced marketing materials",
+        "Full software suite",
+        "Sublimation capabilities"
+      ],
+      "support_level": "Priority phone and email support",
+      "training_hours": 80,
+      "description": "Comprehensive package for serious entrepreneurs ready to offer full stationery and sublimation services.",
+      "popular": true
+    }
+  },
+  {
+    "name": "Get Specific Franchise Plan (premium)",
+    "endpoint": "api/franchise-plans/premium",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "id": "3e3624e1-2118-4d7c-a34f-9d1eb84f3037",
+      "name": "Premium Package",
+      "type": "premium",
+      "price": 70000.0,
+      "monthly_royalty": 3500.0,
+      "setup_fee": 10000.0,
+      "equipment_included": [
+        "All Professional Package items",
+        "40x60cm Flat Press",
+        "Plate Maker",
+        "Bookbinder",
+        "TTS-Pro 20 Laser Cutting Machine",
+        "Premium furniture package"
+      ],
+      "features": [
+        "Premium equipment package",
+        "Comprehensive training (120 hours)",
+        "Dedicated support manager",
+        "Premium marketing materials",
+        "Advanced software suite",
+        "Laser cutting capabilities",
+        "Custom product development"
+      ],
+      "support_level": "Dedicated support manager",
+      "training_hours": 120,
+      "description": "Complete premium package for established businesses wanting to offer the full range of custom stationery and products.",
+      "popular": false
+    }
+  },
+  {
+    "name": "Get Specific Franchise Plan (enterprise)",
+    "endpoint": "api/franchise-plans/enterprise",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "id": "929c66a0-a90e-4426-8ebc-c8cb67e11eed",
+      "name": "Enterprise Package",
+      "type": "enterprise",
+      "price": 100000.0,
+      "monthly_royalty": 5000.0,
+      "setup_fee": 15000.0,
+      "equipment_included": [
+        "All Premium Package items",
+        "Additional backup equipment",
+        "Advanced computer setup",
+        "Premium display systems",
+        "Complete workshop setup"
+      ],
+      "features": [
+        "Enterprise-grade equipment",
+        "Extensive training (200 hours)",
+        "24/7 dedicated support",
+        "Custom marketing campaigns",
+        "Enterprise software suite",
+        "Territory protection",
+        "Multi-location support",
+        "Custom branding package"
+      ],
+      "support_level": "24/7 dedicated support team",
+      "training_hours": 200,
+      "description": "Ultimate enterprise solution for large-scale operations with multiple locations and extensive custom capabilities.",
+      "popular": false
+    }
+  },
+  {
+    "name": "Submit Contact Inquiry",
+    "endpoint": "api/contact",
+    "method": "POST",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "message": "Contact inquiry submitted successfully",
+      "inquiry_id": "07bf9d65-2fd5-427c-9952-0ba7ac7bfd7d",
+      "status": "received"
+    }
+  },
+  {
+    "name": "Submit Franchise Application",
+    "endpoint": "api/franchise-application",
+    "method": "POST",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "message": "Franchise application submitted successfully",
+      "application_id": "b7c349f2-0746-4345-94ee-04f386efa093",
+      "status": "received",
+      "next_steps": "Our team will review your application and contact you within 48 hours"
+    }
+  },
+  {
+    "name": "Get MVP Manual",
+    "endpoint": "api/manual",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "title": "Michele Aranha Personalizados - Franchise MVP Manual",
+      "sections": [
+        {
+          "title": "Getting Started",
+          "content": [
+            "Welcome to the Michele Aranha Personalizados franchise family",
+            "This manual will guide you through the setup and operation of your franchise",
+            "Follow the step-by-step instructions for optimal results"
+          ]
+        },
+        {
+          "title": "Equipment Setup",
+          "content": [
+            "Unpack and inspect all equipment upon delivery",
+            "Follow manufacturer guidelines for initial setup",
+            "Test all equipment before beginning operations",
+            "Ensure proper ventilation for printing equipment"
+          ]
+        },
+        {
+          "title": "Software Installation",
+          "content": [
+            "Install provided software suite on your computer",
+            "Configure printers and cutting machines",
+            "Test all software connections",
+            "Create backup of all software and settings"
+          ]
+        },
+        {
+          "title": "Operations Guide",
+          "content": [
+            "Daily startup procedures",
+            "Order processing workflow",
+            "Quality control standards",
+            "Customer service guidelines"
+          ]
+        },
+        {
+          "title": "Marketing & Sales",
+          "content": [
+            "Use provided marketing materials",
+            "Local advertising strategies",
+            "Customer acquisition techniques",
+            "Pricing guidelines and profit margins"
+          ]
+        }
+      ],
+      "launch_schedule": {
+        "week_1": "Equipment delivery and setup",
+        "week_2": "Software installation and training",
+        "week_3": "Test operations and quality checks",
+        "week_4": "Marketing launch and first customers"
+      }
+    }
+  },
+  {
+    "name": "Get Launch Schedule",
+    "endpoint": "api/launch-schedule",
+    "method": "GET",
+    "expected_status": 200,
+    "actual_status": 200,
+    "success": true,
+    "response": {
+      "timeline": {
+        "pre_launch": {
+          "duration": "30 days",
+          "activities": [
+            "Franchise agreement signing",
+            "Initial payment processing",
+            "Equipment ordering and shipping",
+            "Location preparation",
+            "Staff recruitment (if needed)"
+          ]
+        },
+        "setup_phase": {
+          "duration": "14 days",
+          "activities": [
+            "Equipment delivery and installation",
+            "Software setup and configuration",
+            "Initial training sessions",
+            "Quality testing and calibration"
+          ]
+        },
+        "training_phase": {
+          "duration": "7-14 days",
+          "activities": [
+            "Hands-on equipment training",
+            "Software mastery sessions",
+            "Business operations training",
+            "Marketing and sales training"
+          ]
+        },
+        "launch_phase": {
+          "duration": "7 days",
+          "activities": [
+            "Soft launch with test customers",
+            "Marketing campaign activation",
+            "Grand opening preparation",
+            "First week operations support"
+          ]
+        }
+      },
+      "total_timeline": "45-60 days from signing to full operation",
+      "critical_milestones": [
+        "Equipment delivery confirmation",
+        "Training completion certification",
+        "Quality assurance approval",
+        "Marketing launch authorization"
+      ]
+    }
+  }
+]
