@@ -1,0 +1,169 @@
+/* Additional custom styles for the App component */
+.franchise-hero {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.9) 0%, rgba(2, 132, 199, 0.9) 100%),
+              url('https://images.unsplash.com/photo-1693031630369-bd429a57f115?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.plan-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card.popular::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(45deg, #ec4899, #be185d);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-bottom-left-radius: 0.5rem;
+  z-index: 10;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.stats-counter {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0ea5e9;
+}
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #0ea5e9, #ec4899);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.process-step {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, #0ea5e9, #ec4899);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.process-step:nth-child(1)::before {
+  content: '1';
+}
+
+.process-step:nth-child(2)::before {
+  content: '2';
+}
+
+.process-step:nth-child(3)::before {
+  content: '3';
+}
+
+.process-step:nth-child(4)::before {
+  content: '4';
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-element {
+  position: absolute;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.contact-form {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200;
+}
+
+.form-textarea {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200 resize-none;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl font-bold text-center mb-4 font-heading;
+}
+
+.section-subtitle {
+  @apply text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .franchise-hero {
+    background-attachment: scroll;
+  }
+  
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-counter {
+    font-size: 2rem;
+  }
+}
+
+/* Loading animations */
+.loading-spinner {
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #0ea5e9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
